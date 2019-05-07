@@ -1,0 +1,15 @@
+.dashboard {
+  &__data-source {
+    display: flex;
+
+    &-toggle {
+      width: 33%;
+      display: flex;
+      align-items: center;
+
+      .toggle-btn__input-label {
+        margin: 0 auto;
+      }
+    }
+  }
+}

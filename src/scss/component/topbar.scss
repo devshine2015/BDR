@@ -2,24 +2,27 @@
   width: 100%;
   position: fixed;
   top: 0;
-  height: 60px;
+  height: 80px;
   z-index: 101;
   box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.05);
-
-  @include themify($themes) {
-    background: themed('colorBackground');
-  }
+  background: linear-gradient(90deg, #001487 0%, #0046B9 100%);
 }
 
 .topbar__wrapper {
-  position: relative;
   display: flex;
-  height: 60px;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  margin: 0 auto;
+
+  //@media screen and (min-width: 768px) {
+  //  width: 80%;
+  //}
 }
 
 .topbar__button {
   width: 60px;
-  height: 60px;
+  height: 80px;
   display: flex;
   background: transparent;
   border: none;
@@ -30,12 +33,12 @@
     outline: none;
   }
 
-  &:hover {
-
-    @include themify($themes) {
-      background: themed('colorHover');
-    }
-  }
+  //&:hover {
+  //
+  //  @include themify($themes) {
+  //    background: themed('colorHover');
+  //  }
+  //}
 
   &.topbar__button--desktop {
     display: none;
@@ -45,10 +48,13 @@
 .topbar__button-icon {
   margin: auto;
   transition: all 0.3s;
-  width: 16px;
+  width: 21px;
 }
 
 .topbar__logo {
+  //position: absolute;
+  //left: 40px;
+  //top: 25px;
   width: 150px;
   height: 32px;
   margin: auto 0;
@@ -68,16 +74,11 @@
 }
 
 .topbar__right {
-  position: absolute;
-  right: 0;
   display: flex;
   height: 100%;
-  margin-right: 15px;
 }
 
 .topbar__left {
-  position: absolute;
-  left: 0;
   display: flex;
   height: 100%;
   width: 50%;
@@ -95,11 +96,11 @@
   padding: 0 15px;
   background-color: transparent;
 
-  &:hover, &:focus, &:active, &:focus:active {
-    @include themify($themes) {
-      background-color: themed('colorHover');
-    }
-  }
+  //&:hover, &:focus, &:active, &:focus:active {
+  //  @include themify($themes) {
+  //    background-color: themed('colorHover');
+  //  }
+  //}
 
   &:focus {
     outline: none;
@@ -116,24 +117,25 @@
 
 .topbar__avatar-img {
   border-radius: 50%;
-  height: 36px;
-  width: 36px;
+  height: 40px;
+  width: 40px;
 }
 
 .topbar__avatar-name {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   display: none;
   margin-left: 10px;
+  color: white !important;
 
-  @include themify($themes) {
-    color: themed('colorText');
-  }
+  //@include themify($themes) {
+  //  color: themed('colorText');
+  //}
 }
 
 .topbar__icon {
-  margin-left: 8px;
+  //margin-left: 8px;
   height: 18px;
   margin-top: auto;
   fill: #b1c3c8;
@@ -246,7 +248,10 @@
   display: none;
 
   &.topbar__collapse--language {
-    min-width: 70px;
+    //position: absolute;
+    //right: 30px;
+    //top: 32px;
+    min-width: 45px;
     display: block;
 
     & > button {
@@ -264,7 +269,7 @@
   width: 270px;
   position: absolute;
   right: 0;
-  bottom: 20px;
+  bottom: 0;
   transform: translateY(100%);
   box-shadow: 0 10px 25px 0 rgba(33, 36, 50, 0.13);
   z-index: 101;
@@ -296,7 +301,7 @@
   background: transparent;
   cursor: pointer;
   text-align: left;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 16px;
   transition: 0.3s;
 
@@ -307,23 +312,18 @@
 
 .topbar__language-btn-title {
   display: flex;
-  font-size: 11px;
+  font-size: 12px;
   align-items: center;
   margin: auto 0;
 
-  @include themify($themes) {
-    color: themed('colorText');
-  }
+  //@include themify($themes) {
+  //  color: themed('colorText');
+  //}
 
   &:not(:last-child) {
     margin-right: 5px;
   }
 
-  img {
-    height: 11px;
-    width: 16px;
-    margin-right: 4px;
-  }
 }
 
 .topbar__back {
@@ -447,17 +447,18 @@
   border: none;
   background: transparent;
   transition: all 0.3s;
+  color: white;
 
-  @include themify($themes) {
-    color: themed('colorText');
-  }
-
-  &:hover {
-
-    @include themify($themes) {
-      background-color: themed('colorHover');
-    }
-  }
+  //@include themify($themes) {
+  //  color: themed('colorText');
+  //}
+  //
+  //&:hover {
+  //
+  //  @include themify($themes) {
+  //    background-color: themed('colorHover');
+  //  }
+  //}
 
   svg {
     margin: auto;
@@ -677,7 +678,7 @@
   margin: auto auto auto 0;
   border: none;
   border-radius: 13px;
-  height: 26px;
+  height: 40px;
   padding-left: 10px;
   padding-right: 46px;
 
@@ -686,7 +687,7 @@
   }
 
   &.topbar__search-field--open {
-    width: 200px;
+    width: 222px;
     opacity: 1;
     margin-left: 10px;
 
@@ -701,9 +702,9 @@
 }
 
 .topbar__search-btn {
-  height: 26px;
-  width: 26px;
-  border-radius: 13px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
   border: none;
   padding: 0;
   background: transparent;

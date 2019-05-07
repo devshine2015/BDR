@@ -6,6 +6,7 @@ import MainWrapper from './MainWrapper';
 import LogIn from '../LogIn/index';
 import ExamplePageOne from '../Example/index';
 import ExamplePageTwo from '../ExampleTwo/index';
+import Dashboard from '../Dashboard/index';
 
 const Pages = () => (
   <Switch>
@@ -19,6 +20,7 @@ const wrappedRoutes = () => (
     <Layout />
     <div className="container__wrap">
       <Route path="/pages" component={Pages} />
+      <Route path="/dashboard" component={Dashboard} />
     </div>
   </div>
 );

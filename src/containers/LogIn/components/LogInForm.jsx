@@ -1,8 +1,5 @@
 import React, { PureComponent } from 'react';
 import { Field, reduxForm } from 'redux-form';
-import EyeIcon from 'mdi-react/EyeIcon';
-import KeyVariantIcon from 'mdi-react/KeyVariantIcon';
-import AccountOutlineIcon from 'mdi-react/AccountOutlineIcon';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import renderCheckBoxField from '../../../shared/components/form/CheckBox';
@@ -31,40 +28,30 @@ class LogInForm extends PureComponent {
     return (
       <form className="form" onSubmit={handleSubmit}>
         <div className="form__form-group">
-          <span className="form__form-group-label">Username</span>
+          <span className="form__form-group-label">Email</span>
           <div className="form__form-group-field">
-            <div className="form__form-group-icon">
-              <AccountOutlineIcon />
-            </div>
             <Field
+              className="account__input"
               name="name"
               component="input"
               type="text"
-              placeholder="Name"
+              placeholder="Email"
             />
           </div>
         </div>
         <div className="form__form-group">
           <span className="form__form-group-label">Password</span>
           <div className="form__form-group-field">
-            <div className="form__form-group-icon">
-              <KeyVariantIcon />
-            </div>
             <Field
+              className="account__input"
               name="password"
               component="input"
               type={showPassword ? 'text' : 'password'}
-              placeholder="Password"
+              placeholder="Passwort"
             />
-            <button
-              className={`form__form-group-button${showPassword ? ' active' : ''}`}
-              onClick={e => this.showPassword(e)}
-              type="button"
-            ><EyeIcon />
-            </button>
           </div>
           <div className="account__forgot-password">
-            <a href="/">Forgot a password?</a>
+            <a href="/">Passwort vergessen?</a>
           </div>
         </div>
         <div className="form__form-group">
@@ -72,12 +59,14 @@ class LogInForm extends PureComponent {
             <Field
               name="remember_me"
               component={renderCheckBoxField}
-              label="Remember me"
+              label="Anmeldedaten merken"
             />
           </div>
         </div>
-        <Link className="btn btn-primary account__btn account__btn--small" to="/pages/one">Sign In</Link>
-        <Link className="btn btn-outline-primary account__btn account__btn--small" to="/log_in">Create Account</Link>
+        <Link className="btn btn-dark-blue account__btn account__btn--small" to="/pages/one">Anmelden</Link>
+        <Link className="btn btn-secondary account__btn account__btn--small" to="/log_in">
+          Account beantragen
+        </Link>
       </form>
     );
   }

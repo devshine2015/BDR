@@ -5,8 +5,8 @@ import SidebarCategory from './SidebarCategory';
 
 class SidebarContent extends Component {
   static propTypes = {
-    changeToDark: PropTypes.func.isRequired,
-    changeToLight: PropTypes.func.isRequired,
+    // changeToDark: PropTypes.func.isRequired,
+    // changeToLight: PropTypes.func.isRequired,
     onClick: PropTypes.func.isRequired,
   };
 
@@ -16,25 +16,28 @@ class SidebarContent extends Component {
   };
 
   render() {
-    const { changeToDark, changeToLight } = this.props;
+    // const { changeToDark, changeToLight } = this.props;
     return (
       <div className="sidebar__content">
         <ul className="sidebar__block">
-          <SidebarLink title="Log In" icon="exit" route="/log_in" onClick={this.hideSidebar} />
-          <SidebarCategory title="Layout" icon="layers">
-            <button type="button" className="sidebar__link" onClick={changeToLight}>
-              <p className="sidebar__link-title">Light Theme</p>
-            </button>
-            <button type="button" className="sidebar__link" onClick={changeToDark}>
-              <p className="sidebar__link-title">Dark Theme</p>
-            </button>
+          <SidebarLink title="Dashboard" icon="home" route="/dashboard" onClick={this.hideSidebar} />
+          <SidebarLink title="Datenquellen" icon="file-empty" route="/data/sources" onClick={this.hideSidebar} />
+          <SidebarCategory title="Auftragsübersicht" icon="list">
+            <SidebarLink title="Pseudonymisierung" route="/order/pseudo" onClick={this.hideSidebar} />
+            <SidebarLink title="Datenqualität" route="/order/data" onClick={this.hideSidebar} />
+          </SidebarCategory>
+          <SidebarCategory title="Data Analytics" icon="chart-bars">
+            <SidebarLink title="Data1" route="/data/1" onClick={this.hideSidebar} />
+            <SidebarLink title="Data2" route="/data/2" onClick={this.hideSidebar} />
+          </SidebarCategory>
+          <SidebarCategory title="Mein Benutzerkonto" icon="user">
+            <SidebarLink title="user1" route="/account/1" onClick={this.hideSidebar} />
+            <SidebarLink title="user2" route="/account/2" onClick={this.hideSidebar} />
           </SidebarCategory>
         </ul>
+
         <ul className="sidebar__block">
-          <SidebarCategory title="Example Pages" icon="diamond">
-            <SidebarLink title="Page one" route="/pages/one" onClick={this.hideSidebar} />
-            <SidebarLink title="Page two" route="/pages/two" onClick={this.hideSidebar} />
-          </SidebarCategory>
+          <SidebarLink title="Abmelden" icon="exit" route="/log_in" onClick={this.hideSidebar} />
         </ul>
       </div>
     );

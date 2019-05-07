@@ -4,11 +4,12 @@
 
   input, textarea {
     width: 100%;
-    padding: 5px 10px;
-    font-size: 12px;
-    height: 32px;
+    padding: 10px 15px;
+    //font-size: 14px;
+    //height: 32px;
     transition: border 0.3s;
     background: transparent;
+    font-family: "TitilliumWeb-Light";
 
     &::-webkit-input-placeholder {
       color: $color-additional;
@@ -46,7 +47,7 @@
 
     &:focus, &:active {
       outline: none;
-      border-color: $color-accent;
+      border-color: $color-dark-blue;
     }
   }
 
@@ -303,6 +304,8 @@
 .form__form-group-label {
   margin-bottom: 4px;
   display: inline-block;
+  font-weight: 600;
+  font-size: 14px;
 
   @include themify($themes) {
     color: themed('colorText');

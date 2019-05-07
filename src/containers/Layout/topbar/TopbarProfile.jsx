@@ -2,8 +2,7 @@ import React, { PureComponent } from 'react';
 import DownIcon from 'mdi-react/ChevronDownIcon';
 import { Collapse } from 'reactstrap';
 import TopbarMenuLink from './TopbarMenuLink';
-
-const Ava = `${process.env.PUBLIC_URL}/img/ava.png`;
+import Avatar from '../../../shared/img/ava.png';
 
 export default class TopbarProfile extends PureComponent {
   constructor() {
@@ -23,7 +22,7 @@ export default class TopbarProfile extends PureComponent {
     return (
       <div className="topbar__profile">
         <button type="button" className="topbar__avatar" onClick={this.toggle}>
-          <img className="topbar__avatar-img" src={Ava} alt="avatar" />
+          <img className="topbar__avatar-img" src={Avatar} alt="avatar" />
           <p className="topbar__avatar-name">Roman Johanson</p>
           <DownIcon className="topbar__icon" />
         </button>

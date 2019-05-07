@@ -155,6 +155,20 @@
     }
   }
 
+  &.btn-dark-blue {
+    background-color: $color-dark-blue;
+    border-color: $color-dark-blue;
+    color: white;
+
+    &:before {
+      background-color: $color-dark-blue-hover;
+    }
+
+    &:hover, &:focus, &:active, &:active:focus {
+      border-color: $color-dark-blue-hover;
+    }
+  }
+
   &.btn-primary {
     background-color: $color-blue;
     border-color: $color-blue;

@@ -1,6 +1,10 @@
 @import 'settings/variable';  //themes' colors
 
+//vendor...
+@import './vendor';
+
 //base...
+@import 'fonts/index';
 @import 'generic/normalize.scss';
 @import 'generic/box-sizing.scss';
 @import './base/scaffolding';         // styles of base elements
@@ -14,9 +18,13 @@
 @import './component/topbar';
 @import './component/load';
 @import './component/form';
+@import './component/panel';
+@import './component/progress-bar';
+@import './component/toggle-btn';
 
 //pages...
 @import 'containers/account';
+@import 'containers/dashboard';
 
 //objects...
 @import 'objects/layout.scss';

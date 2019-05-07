@@ -5,11 +5,11 @@
   &:hover {
 
     .checkbox-btn__checkbox-custom {
-      border-color: $color-accent;
+      border-color: $color-dark-blue;
     }
 
     .checkbox-btn__label {
-      color: $color-accent;
+      color: $color-dark-blue;
     }
   }
 
@@ -38,8 +38,8 @@
   &.checkbox-btn--colored {
 
     .checkbox-btn__checkbox-custom {
-      border-color: $color-accent;
-      background-color: $color-accent;
+      border-color: $color-dark-blue;
+      background-color: $color-dark-blue;
 
       svg {
         fill: #ffffff;
@@ -50,8 +50,8 @@
       opacity: 0.4;
 
       .checkbox-btn__checkbox-custom {
-        border-color: $color-accent;
-        background-color: $color-accent;
+        border-color: $color-dark-blue;
+        background-color: $color-dark-blue;
       }
     }
   }
@@ -59,8 +59,8 @@
   &.checkbox-btn--colored-click {
 
     .checkbox-btn__checkbox:checked + .checkbox-btn__checkbox-custom {
-      border-color: $color-accent;
-      background-color: $color-accent;
+      border-color: $color-dark-blue;
+      background-color: $color-dark-blue;
 
       svg {
         fill: #ffffff;
@@ -84,7 +84,7 @@
   }
 
   &.checkbox-btn--button {
-    background: $color-accent;
+    background: $color-dark-blue;
     min-width: 150px;
     color: #ffffff;
     height: 24px;
@@ -134,7 +134,7 @@
     }
 
     &:hover {
-      background: $color-accent-hover;
+      background: $color-dark-blue-hover;
 
       .checkbox-btn__label {
         color: #ffffff;
@@ -157,8 +157,8 @@
 
 .checkbox-btn__checkbox-custom {
   position: absolute;
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
   border-radius: 3px;
 
   @include themify($themes) {
@@ -168,17 +168,16 @@
   svg {
     transition: all 0.3s;
     opacity: 0;
-    height: 16px;
-    width: 16px;
-    fill: $color-accent;
-    margin-top: -6px;
+    height: 14px;
+    width: 14px;
+    fill: $color-dark-blue;
+    margin-top: -14px;
   }
 }
 
 .checkbox-btn__label {
   line-height: 18px;
-  padding-left: 28px;
-  padding-top: 2px;
+  padding-left: 24px;
 
   @include themify($themes) {
     color: themed('colorText');

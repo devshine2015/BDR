@@ -19,9 +19,12 @@
       "specialLink": [ "to", "hrefLeft", "hrefRight" ],
       "aspects": [ "noHref", "invalidHref", "preferButton" ]
     }],
-    "max-len": ["error", {"code": 120, "ignoreRegExpLiterals": true, "tabWidth": 2}],
+    "max-len": "off",
     "no-console": [1],
     "linebreak-style": "off",
-    "react/jsx-one-expression-per-line": [0, { "allow": "literal" }]
+    "react/jsx-one-expression-per-line": "off",
+    "react/button-has-type": "off",
+    "react/no-unescaped-entities": "off",
+    "object-curly-newline": "off"
   }
 }
